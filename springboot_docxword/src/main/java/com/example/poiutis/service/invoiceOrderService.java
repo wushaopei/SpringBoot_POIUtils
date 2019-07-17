@@ -19,5 +19,12 @@ public interface invoiceOrderService {
      */
     List<InvoiceOrder> getInvoiceLists(List<String> invoiceOrders);
 
+    /**
+     * 查询开票记录
+     * @param invoiceOrders 用户名id
+     * @param currentPage 页码
+     * @return pageSize 每页数据量
+     */
+    List<InvoiceOrder> queryInvoiceLists(List<String> invoiceOrders, int currentPage, int pageSize);
 
 }
