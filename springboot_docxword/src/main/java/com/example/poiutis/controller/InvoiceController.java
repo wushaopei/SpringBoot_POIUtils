@@ -28,7 +28,7 @@ import java.util.*;
  *
  */
 @RestController
-@RequestMapping(value = "/aiicp")
+@RequestMapping(value = "/webcode")
 public class InvoiceController {
 
     private static Logger logger = LoggerFactory.getLogger(InvoiceController.class);
