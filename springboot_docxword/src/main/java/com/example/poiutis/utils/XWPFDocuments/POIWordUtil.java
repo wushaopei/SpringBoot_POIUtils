@@ -40,7 +40,7 @@ public class POIWordUtil{
 
             //生成新的word
             File file = new File(outputUrl);
-            if (!file.getParentFile().exists()) {
+                if (!file.getParentFile().exists()) {
                 file.getParentFile().mkdirs();
             }
                 //直接输出到临时目录下
@@ -79,10 +79,10 @@ public class POIWordUtil{
             String name=filename+".docx";
             response.setContentType("octets/stream");
             // 防止乱码
-            response.addHeader("Content-Disposition", "attachment;filename="
-                    + URLEncoder.encode(name, "UTF-8"));
-//                response.setHeader("Content-Disposition", "attachment; filename=" + new String((filename+".docx").getBytes("GB2312"),"ISO8859-1"));
-//                response.setContentType("application/x-msdownload;");
+//            response.addHeader("Content-Disposition", "attachment;filename="
+//                    + URLEncoder.encode(name, "UTF-8"));
+                response.setHeader("Content-Disposition", "attachment; filename=" + new String((filename+".docx").getBytes("GB2312"),"ISO8859-1"));
+                response.setContentType("application/x-msdownload;");
 //                response.setContentType("application/vnd.openxmlformats-officedocument.wordprocessingml.document");
                 document.write(response.getOutputStream());
 
