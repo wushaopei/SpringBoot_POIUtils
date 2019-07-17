@@ -38,4 +38,19 @@ public class InvoiceOrderServiceImpl implements invoiceOrderService {
 
         return openingInvoiceOrders;
     }
+
+    @Override
+    public List<InvoiceOrder> queryInvoiceLists(List<String> invoiceOrders, int currentPage, int pageSize) {
+
+        //创建List保存查询到的每一个发票bean
+        List<InvoiceOrder> openingInvoiceOrders = new ArrayList<>();
+
+        //根据开票订单号查询开票信息
+        for (String invoiceOrder : invoiceOrders) {
+            InvoiceOrder openingInvoiceOrder = invoiceOrderDao.queryInvoiceLists(invoiceOrder,currentPage,pageSize);
+            openingInvoiceOrders.add(openingInvoiceOrder);
+        }
+
+        return openingInvoiceOrders;
+    }
 }
