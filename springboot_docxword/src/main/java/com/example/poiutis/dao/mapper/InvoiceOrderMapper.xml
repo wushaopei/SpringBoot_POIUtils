@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.poiutis.dao.InvoiceOrderDao">
+
+    <!--获取发票信息导出到word文档-->
+    <select id="selectOpeningInvoice" resultType="com.example.poiutis.model.InvoiceOrder">
+        select oi.invoiceOrder,oi.companyName,oi.companyAddress,
+        oi.companyTelephone,oi.taxNumber,oi.accountBank,oi.accountName,oi.bankNumber
+        from invoiceorder as oi
+        where  oi.invoiceOrder = #{invoiceOrder}
+    </select>
+
+
+</mapper>
