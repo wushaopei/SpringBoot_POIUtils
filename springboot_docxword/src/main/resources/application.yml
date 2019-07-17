@@ -3,7 +3,7 @@ spring:
     active: dev
 
 mybatis:
-  mapperLocations: classpath*:com.example.poiutis/dao/**/*Mapper.xml
+  mapperLocations: classpath*:com/example/poiutis/dao/**/*.xml
   typeAliasesPackage: classpath*:com.example.poiutis.model
   typeHandlersPackage: classpath*:com.example.poiutis.handler.enums
 
