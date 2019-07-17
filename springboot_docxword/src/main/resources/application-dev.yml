@@ -23,7 +23,7 @@ Thread:
 spring:
    datasource:
      driver-class-name: com.mysql.cj.jdbc.Driver
-     url: jdbc:mysql://localhost:3333/aiicp-gxzx?useUnicode=true&characterEncoding=utf-8&useSSL=false&autoReconnect=true&serverTimezone=UTC
+     url: jdbc:mysql://localhost:3333/poi-utils?useUnicode=true&characterEncoding=utf-8&useSSL=false&autoReconnect=true&serverTimezone=UTC
      username: root
      password: root
 
