@@ -25,4 +25,14 @@ public interface InvoiceOrderDao {
      * @return 获取结果
      */
     InvoiceOrder selectOpeningInvoice(@Param("invoiceOrder") String invoiceOrder);
+
+    /**
+     * 根据invoiceOrders 的集合 获取发票数据
+     * @param invoiceOrder 开票单号
+     * @param currentPage 页码
+     * @return pageSize 每页数据量
+     */
+    InvoiceOrder queryInvoiceLists(@Param("invoiceOrder") String invoiceOrder,
+                                    @Param("currentPage") int currentPage,
+                                    @Param("pageSize") int pageSize);
 }
