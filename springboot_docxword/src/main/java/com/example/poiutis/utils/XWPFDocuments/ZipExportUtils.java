@@ -72,19 +72,20 @@ public class ZipExportUtils {
                     fos =response.getOutputStream();
                     zos =new ZipOutputStream(fos);
 
-                   /* response.setContentType("application/zip");
+                    response.setContentType("application/zip");
                     response.setHeader("Connection","close");//表示不能用浏览器直接打开
                     response.setHeader("Accept-Ranges","bytes");//告诉客户端允许端点续传多线程连接下载
                     response.setHeader("Content-Disposition",
-                            "attachment;filename="+new String((fileName+".zip").getBytes("UTF-8"),"UTF-8"));
+                            "attachment;filename="+new String((fileName+".zip").getBytes("GB2312"),"ISO8859-1"));
                     response.setCharacterEncoding("UTF-8");
-                    response.setContentType("application/zip");*/
+
+                   /* response.setContentType("application/zip");*/
 
                     String name=fileName+".zip";
                     response.setContentType("octets/stream");
                     // 防止乱码
-                    response.addHeader("Content-Disposition", "attachment;filename="
-                            + URLEncoder.encode(name, "UTF-8"));
+//                    response.addHeader("Content-Disposition", "attachment;filename="
+//                            + URLEncoder.encode(name, "UTF-8"));
 
                     byte[] bufs = new byte[1024 * 10];
 
