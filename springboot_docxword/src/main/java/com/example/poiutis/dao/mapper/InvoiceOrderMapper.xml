@@ -11,4 +11,12 @@
     </select>
 
 
+    <!--获取发票信息导出到word文档-->
+    <select id="queryInvoiceLists" resultType="com.example.poiutis.model.InvoiceOrder">
+        select oi.invoiceOrder,oi.companyName,oi.companyAddress,
+        oi.companyTelephone,oi.taxNumber,oi.accountBank,oi.accountName,oi.bankNumber
+        from invoiceorder as oi
+        where  oi.invoiceOrder = #{invoiceOrder}
+        order by oi.id  limit #{currentPage},#{pageSize}
+    </select>
 </mapper>
