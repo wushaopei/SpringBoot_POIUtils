@@ -1,0 +1,30 @@
+#服务器端口号
+server:
+  port: 80
+
+
+
+#html转PDF编码格式
+code:
+  format: UTF-8
+
+#图片存放路径
+img:
+  location: C:\\TEST\\
+
+
+#设置线程池，线程数量大小
+Thread:
+  Size: 200
+  Waiting: 100
+  Bulking: 200
+
+#mysql
+spring:
+   datasource:
+     driver-class-name: com.mysql.cj.jdbc.Driver
+     url: jdbc:mysql://localhost:3333/poi-utils?useUnicode=true&characterEncoding=utf-8&useSSL=false&autoReconnect=true&serverTimezone=UTC
+     username: root
+     password: root
+
+filetypeallow: jpg,png,rar,txt,zip,doc,ppt,pptx,xls,pdf,docx,xlsx,html,htm,csv,eml
